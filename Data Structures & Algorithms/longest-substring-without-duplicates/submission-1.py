@@ -24,3 +24,11 @@ class Solution:
             res = max(res, r-l+1)
             r += 1
         return res
+
+```
+s = "abba":
+
+At r = 2, s[r] = 'b', seen['b'] = 1.
+New l must become 2 (just after index 1) so that the window is "b" or "ba", not "bb". 
+Doing seen['b'] would leave both b’s in the window; seen['b'] + 1 removes the earlier one.
+```
